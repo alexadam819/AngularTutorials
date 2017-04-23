@@ -1,0 +1,9 @@
+<div class="media" *ngFor="#tweet of tweets">
+  <div class="media-left">
+    <img class="media-object" src="http://lorempixel.com/100/100/people/{{tweet.id}}" alt="Profile Pic">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{tweet.displayName}} {{tweet.userName}}</h4>
+    {{tweet.tweet}}
+  </div>
+</div>
