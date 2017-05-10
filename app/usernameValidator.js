@@ -8,6 +8,20 @@ System.register([], function(exports_1, context_1) {
             UsernameValidator = (function () {
                 function UsernameValidator() {
                 }
+                UsernameValidator.shouldBeUnique = function (control) {
+                    return new Promise(function (resolve, reject) {
+                        setTimeout(function () {
+                            var name;
+                            name = control.value;
+                            if (name.toUpperCase() == "ALEX") {
+                                resolve({ shouldBeUnique: true });
+                            }
+                            else {
+                                resolve(null);
+                            }
+                        }, 1000);
+                    });
+                };
                 UsernameValidator.cannotContainSpace = function (control) {
                     if (control.value.indexOf(' ') >= 0) {
                         return { cannotContainSpace: true };

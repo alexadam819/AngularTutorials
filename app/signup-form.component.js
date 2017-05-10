@@ -30,7 +30,7 @@ System.register(['angular2/core', 'angular2/common', './usernameValidator'], fun
                         username: ['', common_1.Validators.compose([
                                 common_1.Validators.required,
                                 usernameValidator_1.UsernameValidator.cannotContainSpace
-                            ])],
+                            ]), usernameValidator_1.UsernameValidator.shouldBeUnique],
                         password: ['', common_1.Validators.required]
                     });
                 }
@@ -39,6 +39,9 @@ System.register(['angular2/core', 'angular2/common', './usernameValidator'], fun
                 //     password: new Control('', Validators.required)
                 //});
                 SignUpFormComponent.prototype.signup = function () {
+                    this.form.find("username").setErrors({
+                        invalidLogin: true
+                    });
                     console.log(this.form.value);
                 };
                 SignUpFormComponent = __decorate([
