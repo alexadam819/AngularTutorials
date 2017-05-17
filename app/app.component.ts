@@ -7,7 +7,8 @@ import {BootstrapPanel} from './bootstrap.panel.component';
 import {ZippyComponent} from './zippy.component';
 import {ContactFormComponent} from './contact-form.component';
 import {SubscriptionFormComponent} from './subscription-form.component';
-import {SignUpFormComponent} from './signup-form.component'
+import {SignUpFormComponent} from './signup-form.component';
+import {ChangePasswordComponent} from './changePassword.component';
 
 @Component({
     selector: 'my-app',
@@ -21,7 +22,8 @@ import {SignUpFormComponent} from './signup-form.component'
         ZippyComponent, 
         ContactFormComponent,
         SubscriptionFormComponent,
-        SignUpFormComponent
+        SignUpFormComponent,
+        ChangePasswordComponent
     ]
 })
 export class AppComponent {
